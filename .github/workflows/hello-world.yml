@@ -70,7 +70,7 @@ jobs:
         run: chmod +x ci/push-docker.sh && ci/push-docker.sh
   Component-test:
     needs: [Docker-image]
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Download code
         uses: actions/download-artifact@v1
